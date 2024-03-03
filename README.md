@@ -16,6 +16,7 @@
   - [concatenation strings](#concatenation-strings)
     - [templates literals and template strings](#templates-literals-and-template-strings)
       - [ecma script and \`\`](#ecma-script-and-)
+  - [arithmetic operator](#arithmetic-operator)
 
 ## 1- work with chrome develope tools
 
@@ -211,3 +212,11 @@ console.log(`${a} hello ${b}
   // now we writing "HTML" in JS 
   document.write(card); // it will apear on the page  
   ```
+
+  ## arithmetic operator 
+| operator | description  | the job |
+|:--------:|----------|----------|
+|  +       | addition |  it adds tow numbers or strings or variables or more together |
+| Row 2 Col 1 | Row 2 Col 2 | Row 2 Col 3 |
+| Row 3 Col 1 | Row 3 Col 2 | Row 3 Col 3 |
+
