@@ -217,6 +217,18 @@ console.log(`${a} hello ${b}
 | operator | description  | the job |
 |:--------:|----------|----------|
 |  +       | addition |  it adds tow numbers or strings or variables or more together |
-| Row 2 Col 1 | Row 2 Col 2 | Row 2 Col 3 |
-| Row 3 Col 1 | Row 3 Col 2 | Row 3 Col 3 |
+|   -      | subtraction |  it subtracts the numbers we cant just  |
+|   *      | multiplication |  it  multiplies numbers  |
+|   **      | Exponentiation |  it  multiplies numbers  |
+|   /      |  	Division |  it divides numbers  |
+|   %      |  	Modulus (Remainder) |  it returns the division remainder  |
+|   ++     |    Increment |  it increments numbers |
+|  --     |  	decrement |  it decrements numbers  |
+
+
+
+
+
+
+
 
