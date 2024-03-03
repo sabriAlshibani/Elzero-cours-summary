@@ -195,8 +195,19 @@ console.log(`${a} ${b} ${c}`); // we do not need to use the last methods
 console.log(`${a} hello ${b} 
  ${c}`); // just by click enter 
 ```
-- example 
+- an example 
   ```javascript
-  // write some variables
-  let title 
+  //here are some variables in one line
+  let title = " learning js",
+   description = " we learning js from Elzero web school", 
+   date = "2023/ 11/ 23";
+  // we created HTML in a variable
+  let card = `
+  <div class="card">
+  <h3 class="title"> ${title} </h3>
+  <p class="title"> ${description} </p>
+  <span class="title"> ${date} </span>
+  `
+  // now we writing "HTML" in JS 
+  document.write(card); // it will apear on the page  
   ```
