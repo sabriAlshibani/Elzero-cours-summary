@@ -8,6 +8,11 @@
   - [2- where to put the code](#2--where-to-put-the-code)
   - [3- comments](#3--comments)
   - [4- Data types \& typeOf operator](#4--data-types--typeof-operator)
+    - [output](#output)
+    - [output](#output-1)
+    - [output](#output-2)
+    - [output](#output-3)
+    - [output](#output-4)
   - [Variables](#variables)
   - [compare between var, let, and const](#compare-between-var-let-and-const)
     - [var](#var)
@@ -17,6 +22,9 @@
     - [templates literals and template strings](#templates-literals-and-template-strings)
       - [ecma script and \`\`](#ecma-script-and-)
   - [arithmetic operator](#arithmetic-operator)
+  - [unary operator](#unary-operator)
+    - [plus operator`(+)`](#plus-operator)
+      - [output](#output-5)
 
 ## 1- work with chrome develope tools
 
@@ -86,11 +94,19 @@ there are two types of comments
 ```javascript
 console.log(typeof "learning JS");
 ```
+### output
+```
+string
+```
 
 2- **number**
 
 ```javascript
 console.log(typeof 5000);
+```
+### output
+```
+number
 ```
 
 3- **boolean**
@@ -98,6 +114,11 @@ console.log(typeof 5000);
 ```javascript
 console.log(typeof true);
 console.log(typeof false);
+```
+### output
+```
+boolean
+boolean
 ```
 
 4- **object**
@@ -107,12 +128,23 @@ console.log(typeof ["Ali", "Mohammed", "Osama"]); // this is called "array" but 
 console.log(typeof null); // if the variable is empty it called null
 console.log(typeof { name: "Sabri", age: 17, country: "Yemen" }); // this is called object and its kind from object
 ```
+### output
+```
+object
+object
+object
+```
 
 5- **undefined**
 
 ```javascript
 console.log(typeof undefined);
 ```
+### output
+```
+undefined
+```
+
 
 ## Variables
 
@@ -130,10 +162,17 @@ console.log(typeof undefined);
 var user = "Sabri";
 console.log(user);
 ```
+```
+Sabri
+```
+
 if we use the variable before declare it it will be undefined like this code
 ```javascript 
 console.log(user);
 var user = "Sabri";
+```
+```
+undefined
 ```
 
 ## compare between var, let, and const
@@ -143,9 +182,15 @@ we can redeclare it and if we use it before we declare the value will be undefin
 ```javascript 
 var age = 1; // here we redeclare it the value in it will be "2"
 var age = 2;
+console.log(age);
 
 console.log(user);
 var user = "Sabri";
+```
+```
+2
+
+undefined
 ```
 ### let 
 we can not redeclare it and if we use it before we declare there is wrong
@@ -224,6 +269,39 @@ console.log(`${a} hello ${b}
 |   %      |  	Modulus (Remainder) |  it returns the division remainder  |
 |   ++     |    Increment |  it increments numbers |
 |  --     |  	decrement |  it decrements numbers  |
+
+## unary operator
+### plus operator`(+)` 
+  
+  it convert the number into the string to number
+  if we use it ito the string it will be NAN 
+
+
+
+  ```javascript
+  let str1 = "12"; 
+//using unary plus to covert  string to number
+let num = +str1; 
+console.log(num); 
+
+// Here we are using typeof operator 
+console.log(typeof (num)) 
+
+// "Geeks" cannot be converted to a number 
+let str2 = +"Geeks"; 
+console.log(str2);
+
+  ```
+  #### output
+  ```
+  12 
+
+number
+
+NAN
+  ```
+
+
 
 
 
