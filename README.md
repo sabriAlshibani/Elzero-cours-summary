@@ -25,6 +25,10 @@
   - [unary operator](#unary-operator)
     - [plus operator`(+)`](#plus-operator)
       - [output](#output-5)
+    - [negative operator `(-)`](#negative-operator--)
+      - [output](#output-6)
+  - [Number](#number)
+    - [Number methods](#number-methods)
 
 ## 1- work with chrome develope tools
 
@@ -300,6 +304,63 @@ number
 
 NAN
   ```
+
+  ### negative operator `(-)` 
+  it covert string to number also, but when we use it with string witch not a number
+  the result will be NAN 
+
+```javascript
+  let str1 = "12"; 
+//using unary plus to covert  string to number
+let num = -str1; 
+console.log(num); 
+
+// Here we are using typeof operator 
+console.log(typeof (num)) 
+
+// "Geeks" cannot be converted to a number 
+let str2 = -"Geeks"; 
+console.log(str2);
+
+  ```
+
+  #### output
+  ```
+  -12 
+
+number
+
+NAN
+  ```
+
+## Number 
+here are different methods to type number 
+
+```javascript 
+console.log(1000000);
+console.log(1000-000); 
+console.log(10e6); // type after " e " how many zeros do want to it be 
+console.log(10 ** 6);
+console.log(10 * 10 * 10 * 10 * 10 * 10);
+// all those methods get the same result or value 
+
+```
+
+### Number methods
+we have some methods of Number methods 
+
+```javascript 
+console.log( (100).toString()); // it convert number to string put the number into () or type two (.) after number like way below if the number with out Fractions
+
+console.log( 100.55555.toFixed());  // it fixes the number from Fractions just type how many numbers do you want be after the main number 
+
+console.log(Number("100")); // convert string to number 
+// but if we type  (100 Ahmed) what will happen ?
+console.log(Number("100 Ahmed")); // the result will be NAN 
+// and also using unary operator 
+
+```
+
 
 
 
