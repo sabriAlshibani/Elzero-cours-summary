@@ -29,6 +29,23 @@
       - [output](#output-6)
   - [Number](#number)
     - [Number methods](#number-methods)
+  - [comparison operator](#comparison-operator)
+    - [equal `==`](#equal-)
+      - [output](#output-7)
+    - [not equal `!=`](#not-equal-)
+      - [output](#output-8)
+    - [strick equal `===`](#strick-equal-)
+      - [output](#output-9)
+    - [strick not equal `!==`](#strick-not-equal-)
+      - [output](#output-10)
+    - [greater than `>`](#greater-than-)
+      - [output](#output-11)
+    - [greater than or equal `>=`](#greater-than-or-equal-)
+      - [output](#output-12)
+    - [less than `<`](#less-than-)
+      - [output](#output-13)
+    - [less than or equal](#less-than-or-equal)
+      - [output](#output-14)
 
 ## 1- work with chrome develope tools
 
@@ -98,7 +115,9 @@ there are two types of comments
 ```javascript
 console.log(typeof "learning JS");
 ```
+
 ### output
+
 ```
 string
 ```
@@ -108,7 +127,9 @@ string
 ```javascript
 console.log(typeof 5000);
 ```
+
 ### output
+
 ```
 number
 ```
@@ -119,7 +140,9 @@ number
 console.log(typeof true);
 console.log(typeof false);
 ```
+
 ### output
+
 ```
 boolean
 boolean
@@ -132,7 +155,9 @@ console.log(typeof ["Ali", "Mohammed", "Osama"]); // this is called "array" but 
 console.log(typeof null); // if the variable is empty it called null
 console.log(typeof { name: "Sabri", age: 17, country: "Yemen" }); // this is called object and its kind from object
 ```
+
 ### output
+
 ```
 object
 object
@@ -144,11 +169,12 @@ object
 ```javascript
 console.log(typeof undefined);
 ```
+
 ### output
+
 ```
 undefined
 ```
-
 
 ## Variables
 
@@ -162,28 +188,34 @@ undefined
 
 - how to we write the variables ?
   like this ways
-```javascript 
+
+```javascript
 var user = "Sabri";
 console.log(user);
 ```
+
 ```
 Sabri
 ```
 
 if we use the variable before declare it it will be undefined like this code
-```javascript 
+
+```javascript
 console.log(user);
 var user = "Sabri";
 ```
+
 ```
 undefined
 ```
 
 ## compare between var, let, and const
 
-### var 
-we can redeclare it and if we use it before we declare the value will be undefined 
-```javascript 
+### var
+
+we can redeclare it and if we use it before we declare the value will be undefined
+
+```javascript
 var age = 1; // here we redeclare it the value in it will be "2"
 var age = 2;
 console.log(age);
@@ -191,183 +223,307 @@ console.log(age);
 console.log(user);
 var user = "Sabri";
 ```
+
 ```
 2
 
 undefined
 ```
-### let 
+
+### let
+
 we can not redeclare it and if we use it before we declare there is wrong
-```javascript 
+
+```javascript
 var age = 1; // here we can not redeclare if we do that it will be a wrong
 var age = 2;
 
 console.log(user);
 var user = "Sabri";
 ```
+
 ### const
+
 we can not redeclare it and if we use it before we declare there is wrong
-```javascript 
+
+```javascript
 var age = 1; // here we can not redeclare if we do that it will be a wrong
 var age = 2;
 
 console.log(user);
 var user = "Sabri";
 ```
+
 finally when we create var we can find it in the window
 but let and const can not be there.
 
-## concatenation strings 
+## concatenation strings
+
 here we have some example
+
 ```javascript
 let firstName = "Mohammed";
 let lastName = "Ali"
-console.log(firstName + lastName); // we contact both by this way 
-// if we want to make a gap between them use this 
+console.log(firstName + lastName); // we contact both by this way
+// if we want to make a gap between them use this
 console.log(firstName + " " lastName); // here it will be a gap
 console.log(firstName,lastName); // this day it considers them to messages then it prints them beside each others it means there is a automatic gap.
 ```
+
 ### templates literals and template strings
-when we want to make gaps between the variables we use this ways 
-```javascript 
-console.log(a + " " + b + " " + c)
+
+when we want to make gaps between the variables we use this ways
+
+```javascript
+console.log(a + " " + b + " " + c);
 ```
+
 and if we have any strings an we want make on of them under of them we use "`\n`"
-```javascript 
-console.log(a + " " + b + "/n" + c);  // a it will be under them
+
+```javascript
+console.log(a + " " + b + "/n" + c); // a it will be under them
 ```
+
 #### ecma script and ``
- but ecma scrip make it easy without `/n` and without `" "` we can male gaps by this ways
- put the variables between `` then use put the variable into `{}` with $
-```javascript 
+
+but ecma scrip make it easy without `/n` and without `" "` we can male gaps by this ways
+put the variables between ``then use put the variable into`{}` with $
+
+```javascript
 console.log(`${a} ${b} ${c}`); // we do not need to use the last methods
-// we can write any things between them and if we want make them in two more we can 
+// we can write any things between them and if we want make them in two more we can
 console.log(`${a} hello ${b} 
- ${c}`); // just by click enter 
+ ${c}`); // just by click enter
 ```
-- an example 
+
+- an example
+
   ```javascript
   //here are some variables in one line
   let title = " learning js",
-   description = " we learning js from Elzero web school", 
-   date = "2023/ 11/ 23";
+    description = " we learning js from Elzero web school",
+    date = "2023/ 11/ 23";
   // we created HTML in a variable
   let card = `
   <div class="card">
   <h3 class="title"> ${title} </h3>
   <p class="title"> ${description} </p>
   <span class="title"> ${date} </span>
-  `
-  // now we writing "HTML" in JS 
-  document.write(card); // it will apear on the page  
+  `;
+  // now we writing "HTML" in JS
+  document.write(card); // it will apear on the page
   ```
 
-  ## arithmetic operator 
-| operator | description  | the job |
-|:--------:|----------|----------|
-|  +       | addition |  it adds tow numbers or strings or variables or more together |
-|   -      | subtraction |  it subtracts the numbers we cant just  |
-|   *      | multiplication |  it  multiplies numbers  |
-|   **      | Exponentiation |  it  multiplies numbers  |
-|   /      |  	Division |  it divides numbers  |
-|   %      |  	Modulus (Remainder) |  it returns the division remainder  |
-|   ++     |    Increment |  it increments numbers |
-|  --     |  	decrement |  it decrements numbers  |
+  ## arithmetic operator
+
+  | operator | description         | the job                                                      |
+  | :------: | ------------------- | ------------------------------------------------------------ |
+  |    +     | addition            | it adds tow numbers or strings or variables or more together |
+  |    -     | subtraction         | it subtracts the numbers we cant just                        |
+  |    \*    | multiplication      | it multiplies numbers                                        |
+  |   \*\*   | Exponentiation      | it multiplies numbers                                        |
+  |    /     | Division            | it divides numbers                                           |
+  |    %     | Modulus (Remainder) | it returns the division remainder                            |
+  |    ++    | Increment           | it increments numbers                                        |
+  |    --    | decrement           | it decrements numbers                                        |
 
 ## unary operator
-### plus operator`(+)` 
-  
-  it convert the number into the string to number
-  if we use it ito the string it will be NAN 
 
+### plus operator`(+)`
 
-
-  ```javascript
-  let str1 = "12"; 
-//using unary plus to covert  string to number
-let num = +str1; 
-console.log(num); 
-
-// Here we are using typeof operator 
-console.log(typeof (num)) 
-
-// "Geeks" cannot be converted to a number 
-let str2 = +"Geeks"; 
-console.log(str2);
-
-  ```
-  #### output
-  ```
-  12 
-
-number
-
-NAN
-  ```
-
-  ### negative operator `(-)` 
-  it covert string to number also, but when we use it with string witch not a number
-  the result will be NAN 
+it convert the number into the string to number
+if we use it ito the string it will be NAN
 
 ```javascript
-  let str1 = "12"; 
+let str1 = "12";
 //using unary plus to covert  string to number
-let num = -str1; 
-console.log(num); 
+let num = +str1;
+console.log(num);
 
-// Here we are using typeof operator 
-console.log(typeof (num)) 
+// Here we are using typeof operator
+console.log(typeof num);
 
-// "Geeks" cannot be converted to a number 
-let str2 = -"Geeks"; 
+// "Geeks" cannot be converted to a number
+let str2 = +"Geeks";
 console.log(str2);
+```
 
-  ```
+#### output
 
-  #### output
-  ```
-  -12 
+```
+12
 
 number
 
 NAN
-  ```
+```
 
-## Number 
-here are different methods to type number 
+### negative operator `(-)`
 
-```javascript 
+it covert string to number also, but when we use it with string witch not a number
+the result will be NAN
+
+```javascript
+let str1 = "12";
+//using unary plus to covert  string to number
+let num = -str1;
+console.log(num);
+
+// Here we are using typeof operator
+console.log(typeof num);
+
+// "Geeks" cannot be converted to a number
+let str2 = -"Geeks";
+console.log(str2);
+```
+
+#### output
+
+```
+-12
+
+number
+
+NAN
+```
+
+## Number
+
+here are different methods to type number
+
+```javascript
 console.log(1000000);
-console.log(1000-000); 
-console.log(10e6); // type after " e " how many zeros do want to it be 
+console.log(1000 - 000);
+console.log(10e6); // type after " e " how many zeros do want to it be
 console.log(10 ** 6);
 console.log(10 * 10 * 10 * 10 * 10 * 10);
-// all those methods get the same result or value 
-
+// all those methods get the same result or value
 ```
 
 ### Number methods
-we have some methods of Number methods 
 
-```javascript 
-console.log( (100).toString()); // it convert number to string put the number into () or type two (.) after number like way below if the number with out Fractions
+we have some methods of Number methods
 
-console.log( 100.55555.toFixed());  // it fixes the number from Fractions just type how many numbers do you want be after the main number 
+```javascript
+console.log((100).toString()); // it convert number to string put the number into () or type two (.) after number like way below if the number with out Fractions
 
-console.log(Number("100")); // convert string to number 
+console.log((100.55555).toFixed()); // it fixes the number from Fractions just type how many numbers do you want be after the main number
+
+console.log(Number("100")); // convert string to number
 // but if we type  (100 Ahmed) what will happen ?
-console.log(Number("100 Ahmed")); // the result will be NAN 
-// and also using unary operator 
-
+console.log(Number("100 Ahmed")); // the result will be NAN
+// and also using unary operator
 ```
 
+## comparison operator
 
+### equal `==`
 
+Returns `true` if the operands are equal.
 
+```javascript
+console.log(10 == "10"); // "compare value only"
+```
 
+#### output
 
+```
+true
+```
 
+### not equal `!=`
 
+returns `true` if the operands are not true.
 
+```javascript
+console.log(10 !== "10"); // "compare value only"
+```
 
+#### output
 
+```
+false
+```
+
+### strick equal `===`
+
+returns `true` if the operands are equal and of the same type.
+
+```javascript
+console.log(10 === "10"); // "compare value + type "
+```
+
+#### output
+
+```
+false
+```
+
+### strick not equal `!==`
+
+returns `true` if the operands are the same type, but not equal, ore equal but are not of the same type.
+
+```javascript
+console.log(10 !== "10"); // "compare value + type "
+```
+
+#### output
+
+```
+true
+```
+
+### greater than `>`
+
+returns `true` if the left operand is grater than the right operand
+
+```javascript
+console.log(10 > 20); // returns false becaus the 10 is not greater than 20
+```
+
+#### output
+
+```
+false
+```
+
+### greater than or equal `>=`
+
+returns `true` if the left operand is greater than or equal to right operand
+
+```javascript
+console.log(10 >= 10); // returns true becaus 10 is not greater than 10 but 10 is equal 10
+```
+
+#### output
+
+```
+true
+```
+
+### less than `<`
+
+returns `true` if the left operand is less than the right operand
+
+```javascript
+console.log(10 < 20); // returns true becaus 10 is less than 20
+```
+
+#### output
+
+```
+true
+```
+
+### less than or equal
+
+returns `true` if the left operand is less than or equal to right operand.
+```javascript
+console.log(10 <= 10 >); // returns true becaus 10 is not less than 10, but 10 is equal 10
+```
+
+#### output
+
+```
+true
+```

@@ -11,3 +11,8 @@ let tests ="seen"
 if (tests.startsWith("s")) {
     console.log("seen");
 } 
+
+for (i = 0; i <= 10; i++) {
+    console.log(i)
+
+}
